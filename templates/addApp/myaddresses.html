@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Your Addresses</title>
+
+    <style>
+        .bg{
+            background-image: linear-gradient(120deg , #2998ff5e , #5543fa5e );
+
+        }
+
+        .utility__mid{
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .box{
+            width: 40%;
+            margin: 20px auto;
+            background-image: linear-gradient(to right , #55c57a , #7ed56f );
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+        }
+
+        p{
+            font-size: 18px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Home</a>
+    </nav>
+    
+    <div class="jumbotron bg ">
+      <h1 class="utility__mid" >Your Addresses : </h1>   
+        <ol>
+            {% for a in alladd %}
+
+            <div class="box">
+                <li>
+                    <p><b>City</b> : {{ a.city }}</p>
+                    <p><b>State</b> : {{ a.state }}</p>
+                    <p><b>Pincode</b> : {{ a.pincode }}</p>
+                    <p><b>Country</b>: {{ a.country }}</p>
+                </li> 
+            </div>
+                 
+            {% endfor %}
+        </ol>
+
+    </div>
+</body>
+</html>

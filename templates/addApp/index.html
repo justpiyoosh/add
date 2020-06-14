@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Homepage</title>
+    <style>
+        *,*::after,
+        *::before{
+            box-sizing: border-box;
+        }
+
+        body{
+            color: #f7f7f7;
+        }
+
+        .jumbotron{
+            background-color: #333;
+        }
+
+        .utility--mid{
+            width: 60%;
+            margin: 30px auto;
+        }
+
+        .Heading{
+            width: 100%;
+           padding-bottom: 50px ;
+        }
+
+        .Heading__link:link,
+        .Heading__link:visited{
+            margin-left: 10px;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background-color: #7ed56f;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            transition: all .3s;
+
+        }
+
+        .Heading__link:hover{
+
+            color: #7ed56f;
+            background-color: #f7f7f7;
+            transform: translateY(-5px);
+            box-shadow: 0px .5px 1px rgba( #000 , .4);
+        }
+
+        .Heading__link:active{
+            transform: translateY(-3px);
+        }
+
+        .Heading__tertiary{
+            text-transform: uppercase;
+            width: 100%;
+            font-size: 22px;
+            padding: 15px 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav style="margin-bottom: 50px;" class="navbar navbar-light navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">Home</a>
+    </nav>
+    <div class="row utility--mid">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="Heading">Welcome on Homepage!!!</h1>
+                <h3 class="Heading__tertiary">To Add an new Address : <a class="Heading__link" href="/addaddress">Add Address</a> </h3>
+                <h3 class="Heading__tertiary">To view the stored addresses : <a class="Heading__link" href="/myaddresses">View Addresses</a> </h3>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

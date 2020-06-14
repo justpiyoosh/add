@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: #f7f7f7;
+        }
+
+        .container{
+
+            width: 40%;
+            margin: 50px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,.4);
+            background-image: linear-gradient(to right , #ffb900,#ff7730);
+            border-radius: 5px;
+            padding: 30px 40px;
+            font-size: 20px;
+            font-weight: 300;
+            text-transform: uppercase;
+
+        }
+
+        h2{
+            font-size: 30px;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding-bottom: 40px;
+        }
+
+        .btn-dec{
+            padding: 5px 10px;
+            font-size: 20px;
+            font-weight: 400;
+            background-color: #2998ff;
+            text-transform: uppercase;
+            margin-top: 20px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <nav style="margin-bottom: 50px;" class="navbar navbar-light navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Home</a>
+    </nav>
+    <form method="POST">
+        <div class="container">
+            <h2>Add a new address</h2>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-success btn-dec" value="Submit">
+        </div>
+    </form>    
+</body>
+</html>
